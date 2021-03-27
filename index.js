@@ -59,10 +59,6 @@ client.connect((err) => {
       res.send(result.insertedCount > 0);
     });
   });
-
-  console.log("db connected");
 });
 
-app.listen(port, () => {
-  console.log(`app listening at http://localhost:${port}`);
-});
+app.listen(process.env.PORT || port);
